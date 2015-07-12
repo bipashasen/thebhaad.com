@@ -1,0 +1,56 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteCond %{HTTP_USER_AGENT} "android|blackberry|googlebot-mobile|iemobile|iphone|ipod|#opera mobile|palmos|webos" [NC]
+#RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^ http://m.thebhaad.com%{REQUEST_URI}
+
+RewriteBase /
+
+ErrorDocument 403 /pnp.php
+ErrorDocument 404 /pnp.php
+RewriteRule ^enter$ signUp.php
+RewriteRule ^personal$ stuffs.php?gkey=personal
+RewriteRule ^help$ help.php
+RewriteRule ^about$ about.php
+RewriteRule ^recovery$ recovery.php
+RewriteRule ^suggestion$ suggestion.php
+RewriteRule ^terms$ terms.php
+RewriteRule ^contacts$ contacts.php
+RewriteRule ^archives$ archives.php
+RewriteRule ^error_user$ verifykey.php
+RewriteRule ^log_in$ index_signIn.php
+RewriteRule ^edit$ interm.php
+RewriteRule ^settings$ settings.php
+RewriteRule ^posts$ posts.php
+RewriteRule ^ce3b9fef_3ed388765c.css$ http://localhost/css/style.css
+RewriteRule ^59e8e138edc_300caf0743367_7ed626dd.js$ http://localhost/js/mailingjs.js
+RewriteRule ^0775d1bfe_51bf5a742c_bb78f0a6a781f.js$ http://localhost/js/validate.js
+RewriteRule ^fceddc7720d_52dae7793dc_b22febfee3_m$ http://localhost/js/position.js
+RewriteRule ^ce9ec99654_1af209662f1c_b5fce3d33d_cP$ /ajaxinc/crop_photo.php
+RewriteRule ^8ec9343ae61_92e15b3665_ec838216a98_sNm$ /ajaxinc/send_mail.php
+RewriteRule ^267fc9f66d_3f6425b138_c1b2c73da1a7_cI$ /ajaxinc/contactsInfinite.php
+RewriteRule ^fc9689f50d35_0ee36956d2_5c5719c077_lO$ /ajaxinc/loadOld.php
+RewriteRule ^3a42f1387a_1f512969124_a5216dbb94d_aC$ /ajaxinc/addcontacts.php
+RewriteRule ^05a0e3c00_2326d16ca70_3b444087ed45_inf$ /ajaxinc/infinitescroll.php
+RewriteRule ^509c601801_230238fea54a_ee838ddf62_gTD$ /ajaxinc/gkey_to_do.php
+RewriteRule ^b0f60b9657_126ddfb1004_7939aa2abdb_mGr$ /ajaxinc/myGroupList.php
+RewriteRule ^a0858f1319_033b86bb3b_51d87ac64762_sGM$ /ajaxinc/showGM.php
+RewriteRule ^8c6fc81_b5ac22bdcbe18_1222da68496b_grR$ /ajaxinc/group_request.php
+RewriteRule ^f27927d5a_918b252e7fa_e186402e17b4_pF$ /ajaxinc/postFunc.php
+RewriteRule ^9712d9c1_2be4d8c9318e69_1b526557b8_sF$ /ajaxinc/searchFile.php
+RewriteRule ^fbf6479f36_4e58609ce2_2fc443ea2764_cT$ /ajaxinc/currentTime.php
+RewriteRule ^b3c58b921_1f04dec05f39_72dd646ab40_edG$ /ajaxinc/edit_gdesc.php
+RewriteRule ^01f2fa0f7_7ba165d50be6_94351bebdd1_rfN$ /ajaxinc/refreshNew.php
+RewriteRule ^19ea9a346c_0da02aefa6_2f4648622880_dwN$ download.php
+RewriteRule ^posts_([a-z0-9]+)$ posts.php?postkey=$1
+RewriteRule ^([a-z0-9]+)&posts$ posts.php?groupkey=$1
+RewriteRule ^([a-z]+[0-9]*)$ group.php?u=$1
+RewriteRule ^([a-z]+[0-9]*)/$ group.php?u=$1
+RewriteRule ^([a-z0-9]+)$ stuffs.php?gkey=$1
+RewriteRule ^([a-z0-9]+)&([a-z0-9]+)$ stuffs.php?gkey=$1&fkey=$2
+RewriteRule ^OPT_([a-z0-9_\.]+)$ profilePic.php?optImage=$1
+RewriteRule ^__([a-z0-9_\.]+)$ profilePic.php?image=$1
+RewriteRule ^_([a-z0-9_\.]+)$ profilePic.php?contentImage=$1
+RewriteRule ^file_([a-z0-9]+)$ download.php?file_key=$1
+RewriteRule ^folder_(.*)$ download.php?folder_download=$1
