@@ -4,7 +4,6 @@ theBhaad.com is a cloud-based group orientated file-sharing platform that enable
 
 Have a look at its feature and get a tour in this [**YouTube video - welcome to theBhaad.com**](https://www.youtube.com/watch?v=S9Oq2n2rIaY&t=178s)!
 
-<img src="./featuresscrnshot/thebhaadTour.png">
 <img src="./featuresscrnshot/home.png">
 
 ## Operating system like file-management interface. 
